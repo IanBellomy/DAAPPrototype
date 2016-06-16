@@ -154,7 +154,7 @@ Example:
 
 	click = each(Box).spin(random(0,360,45));
 	
-When the user clicks, all boxes will rotate, over time, to a value between 0o and 360°. The
+When the user clicks, all boxes will rotate, over time, to a value between 0° and 360°. The
 final value will be a multiple of 45.
 
 ##Create a one shape response to input on that shape
@@ -162,5 +162,5 @@ Example:
 
 	each(Box).click = Item.spin(random(0,360,45));
 
-When the user clicks a Box, that specific Box will rotate, over time, to a value between 0° and 360°. The final value will be a multiple of 45. *Item* is a keyword that refers to the object from where the event came (or will come from). The code can bre read like this "for each Box, when clicked, that Item will spin to a random increment of 45°"
+When the user clicks a Box, that specific Box will rotate, over time, to a value between 0° and 360°. The final value will be a multiple of 45. *Item* is a keyword that refers to the object from where the event came (or will come from). The code can be read like this "for each Box, when clicked, that Item will spin to a random increment of 45°"
 
