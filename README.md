@@ -23,15 +23,15 @@ Examples:
 ##Put a shape (or shapes) on the screen:
 
 	make(Box,5);
-    	make(Triangle,50);
+	make(Triangle,50);
 	make(Line,500);
 	
 Description:
 
 	make(SYMBOL_NAME, QUANTITY);
 
-Symbol can be any symbol in the library set to “export for Actionscript”.
-The example files have the following options for Symbol Box
+SYMBOL_NAME can be any symbol in the library set to “export for Actionscript”.
+The example files have the following options for Symbol Box:
 
 	Triangle
 	Circle
@@ -46,21 +46,24 @@ The example files have the following options for Symbol Box
 
 Description:
 
-	each(SYMBOL_NAME).property
+	each(SYMBOL_NAME).PROPERTY
 
-Note: This works even if there is only one thing. Some options for property include
-	x
-	y
-	width
-	height
-	rotation
-	alpha
-	scaleX
-	scaleY
+Note: This works even if there is only one thing. Some options for PROPERTY include:
+
+	x,
+	y,
+	width,
+	height,
+	rotation,
+	alpha,
+	scaleX,
+	scaleY,
 	scale
 	
 Note: rotation is in degrees.
 Note: The values for alpha, scaleX, and scaleY, and scaleY are 0 to 1, where 1 is 100%, .5 is 50%, and so forth.
+
+each(SYMBOL_NAME) returns a collection of items of the kind SYMBOL_NAME. It is effectively a query function.
 
 ##Create and use random number
 Example:
@@ -75,13 +78,17 @@ Example:
 The above code sets the rotation of each Box to a random number between 0 and 360.
 That number is also a multiple of 45°.
 
+
+
 Description:
 
-	random(low,high);
+	random(LOW,HIGH);
+ 
  Or
-	random(low, high, multiple);
+ 
+	random(LOW,HIGH, MULTIPLE);
 	
- Note: If the multiple input is included, the result will be a multiple of that number. If not, the result will be any decimal number between minimum and maximum.
+Note: If the multiple input is included, the result will be a multiple of that number. If not, the result will be any decimal number between minimum and maximum.
  
 ##Create a basic response to user input
 Example:
@@ -101,25 +108,29 @@ When the user clicks, the workspace will move sideways so that it is -100px off 
 The previous ‘spin’ response is overwritten and will not be triggered.
 Description:
 
-	inputType = animation() Or
-	inputType = animation(VALUE) Or
-	inputType = animation(VALUE, LENGTH) Or
-	inputType = animation(VALUE, LENGTH, DELAY) Options for inputType
-             click
-             rollOver
-             rollOut
+	INPUT_TYPE = ANIMATION() Or
+	INPUT_TYPE = ANIMATION(VALUE) Or
+	INPUT_TYPE = ANIMATION(VALUE, LENGTH) Or
+	INPUT_TYPE = ANIMATION(VALUE, LENGTH, DELAY) 
+
+Options for INPUT_TYPE:
+
+	click
+	rollOver
+	rollOut
              
-Options for animation
+Options for ANIMATION
              
-             spin()
-             slide()
-             lift()
-             grow()
-             fade()
-             blur()
+	spin()
+	slide()
+	lift()
+	grow()
+	fade()
+	blur()
              
 ##Create multiple responses to one input
 Example:
+	
 	click = [grow(.5), spin(45,2), slide(-100,2)];
 	
 When the user clicks, the workspace will shrink to 50%, rotate to 45° over the course of two seconds, and move sideways so that it is -100px off screen.
@@ -132,7 +143,10 @@ Example:
 When the user clicks, all boxes will rotate to 360° over the course of two seconds.
 
 Description:
-inputType = each(Symbol).animation(value, length, delay) Options for the different parts are the same as in previous sections.
+
+	INPUT_TYPE = each(SYMBOL_NAME).ANIMATION(VALUE, DURATION, DELAY) 
+	
+Options for the different parts of this structure are the same as in previous sections.
 
 ##Create a response using random values
 Example:
@@ -147,5 +161,5 @@ Example:
 
 	each(Box).click = Item.spin(random(0,360,45));
 
-When the user clicks a Box, that specific Box will rotate, over time, to a value between 0o and 360°. The final value will be a multiple of 45.
+When the user clicks a Box, that specific Box will rotate, over time, to a value between 0° and 360°. The final value will be a multiple of 45. *Item* is a keyword that refers to the object from where the event came (or will come from). The code can bre read like this "for each Box, when clicked, that Item will spin to a random increment of 45°"
 
