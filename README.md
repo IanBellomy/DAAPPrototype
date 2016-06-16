@@ -10,7 +10,7 @@ DAAPPrototype allows things like this:
 	clip.click = function(){ trace('ok'); } // totally ok
 
 
-DAAPPrototype makes use of the excellent Greensock.com tween engine and the experimental Manipulus.net library. 
+DAAPPrototype makes use of the excellent [Greensock](http://greensock.com) tween engine and the experimental [Manipulus](https://github.com/IanBellomy/Manipulus) library. 
 
 	
 ##Getting Started
