@@ -19,8 +19,7 @@ Set the *Class* of the working file to:
 
 	edu.daap.Prototype
 	
-
-Examples:
+Make sure any symbols you'd like to use are set to export for actionscript.
 
 ##Put a shape (or shapes) on the screen:
 
