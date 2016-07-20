@@ -5,10 +5,11 @@ Created for DAAP Summer Camp workshops on interactivity. The goal was to get hig
 
 DAAPPrototype allows things like this: 
 
-	clip.click = clip.rotate(90); // rotate the clip to 90 degrees on click
-	clip.click = [clip.rotate(90),clip.fade(.5)]; // rotate the clip to 90 degrees and fade to .5 on click
-	clip.click = function(){ trace('ok'); } // totally ok
-
+````actionscript
+clip.click = clip.rotate(90); // rotate the clip to 90 degrees on click
+clip.click = [clip.rotate(90),clip.fade(.5)]; // rotate the clip to 90 degrees and fade to .5 on click
+clip.click = function(){ trace('ok'); } // totally ok
+````
 
 DAAPPrototype makes use of the excellent [Greensock](http://greensock.com) tween engine and the experimental [Manipulus](https://github.com/IanBellomy/Manipulus) library. 
 
@@ -23,13 +24,17 @@ Make sure any symbols you'd like to use are set to export for actionscript.
 
 ##Put a shape (or shapes) on the screen:
 
-	make(Box,5);
-	make(Triangle,50);
-	make(Line,500);
+````actionscript
+make(Box,5);
+make(Triangle,50);
+make(Line,500);
+````
 	
 Description:
 
-	make(SYMBOL_NAME, QUANTITY);
+````actionscript
+make(SYMBOL_NAME, QUANTITY);
+````
 
 SYMBOL_NAME can be any symbol in the library set to “export for Actionscript”.
 The example files have the following options for Symbol Box:
@@ -41,13 +46,17 @@ The example files have the following options for Symbol Box:
 	
 ##Modify shapes on screen:
 
-	each(Box).x = 100;
-	each(Box).rotation = 180;
-	each(Box).alpha = .5;
+````actionscript
+each(Box).x = 100;
+each(Box).rotation = 180;
+each(Box).alpha = .5;
+````
 
 Description:
 
-	each(SYMBOL_NAME).PROPERTY
+````actionscript
+each(SYMBOL_NAME).PROPERTY
+````
 
 Note: This works even if there is only one thing. Some options for PROPERTY include:
 
