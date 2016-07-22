@@ -60,14 +60,14 @@ each(SYMBOL_NAME).PROPERTY
 
 Note: This works even if there is only one thing. Some options for PROPERTY include:
 
-	x,
-	y,
-	width,
-	height,
-	rotation,
-	alpha,
-	scaleX,
-	scaleY,
+	x
+	y
+	width
+	height
+	rotation
+	alpha
+	scaleX
+	scaleY
 	scale
 	
 Note: rotation is in degrees.
@@ -78,12 +78,16 @@ each(SYMBOL_NAME) returns a collection of items of the kind SYMBOL_NAME. It is e
 ##Create and use random number
 Example:
 
-	each(Line).rotation = random(0,360);
+````actionscript
+each(Line).rotation = random(0,360);
+````
 
 The above code sets the rotation of each Line to a random number between 0 and 360.
 Example:
 
-	each(Box).rotation = random(0,360,45);
+````actionscript
+each(Box).rotation = random(0,360,45);
+````
 
 The above code sets the rotation of each Box to a random number between 0 and 360.
 That number is also a multiple of 45°.
@@ -92,28 +96,30 @@ That number is also a multiple of 45°.
 
 Description:
 
-	random(LOW,HIGH);
- 
+````actionscript
+random(LOW,HIGH);
+````
  Or
- 
-	random(LOW,HIGH, MULTIPLE);
-	
+````actionscript
+random(LOW,HIGH, MULTIPLE);
+````
+
 Note: If the multiple input is included, the result will be a multiple of that number. If not, the result will be any decimal number between minimum and maximum.
  
 ##Create a basic response to user input
 Example:
-
-	click = grow(.5);
-	
+````actionscript
+click = grow(.5);
+````	
 When the user clicks, the workspace will shrink to 50%.
-
-	click = spin(45,2);
-	
+````actionscript
+click = spin(45,2);
+````	
 When the user clicks, the workspace will rotate to 45° over the course of two seconds.
 The previous ‘grow’ response is overwritten and will not be triggered.
-
-	click = slide(-100,2);
-	
+````actionscript
+click = slide(-100,2);
+````	
 When the user clicks, the workspace will move sideways so that it is -100px off screen.
 The previous ‘spin’ response is overwritten and will not be triggered.
 Description:
@@ -130,26 +136,29 @@ Options for INPUT_TYPE:
 	rollOut
              
 Options for ANIMATION
-             
-	spin()
-	slide()
-	lift()
-	grow()
-	fade()
-	blur()
-             
+
+````actionscript             
+spin()
+slide()
+lift()
+grow()
+fade()
+blur()
+````             
 ##Create multiple responses to one input
 Example:
-	
-	click = [grow(.5), spin(45,2), slide(-100,2)];
-	
+
+````actionscript	
+click = [grow(.5), spin(45,2), slide(-100,2)];
+````	
 When the user clicks, the workspace will shrink to 50%, rotate to 45° over the course of two seconds, and move sideways so that it is -100px off screen.
 
 ##Create a response for all shapes
 Example:
 
-	click = each(Box).spin(360,2);
-	
+````actionscript
+click = each(Box).spin(360,2);
+````	
 When the user clicks, all boxes will rotate to 360° over the course of two seconds.
 
 Description:
@@ -161,15 +170,18 @@ Options for the different parts of this structure are the same as in previous se
 ##Create a response using random values
 Example:
 
-	click = each(Box).spin(random(0,360,45));
-	
+````actionscript
+click = each(Box).spin(random(0,360,45));
+````
+
 When the user clicks, all boxes will rotate, over time, to a value between 0° and 360°. The
 final value will be a multiple of 45.
 
 ##Create a one shape response to input on that shape
 Example:
 
-	each(Box).click = Item.spin(random(0,360,45));
-
+````actionscript
+each(Box).click = Item.spin(random(0,360,45));
+````
 When the user clicks a Box, that specific Box will rotate, over time, to a value between 0° and 360°. The final value will be a multiple of 45. *Item* is a keyword that refers to the object from where the event came (or will come from). The code can be read like this "for each Box, when clicked, that Item will spin to a random increment of 45°"
 
