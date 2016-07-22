@@ -1,7 +1,7 @@
 #DAAPPrototype
 
 An old Actionscript library that makes basic interactions easy. 
-Created for DAAP Summer Camp workshops on interactivity. The goal was to get highschoolers from zero programming knowledge to making interactive things in a couple of hours.
+Created for DAAP Summer Camp workshops on interactivity. The goal was to get high-schoolers from zero programming knowledge to making interactive things in a couple of hours.
 
 DAAPPrototype allows things like this: 
 
