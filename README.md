@@ -73,7 +73,7 @@ Note: This works even if there is only one thing. Some options for PROPERTY incl
 Note: rotation is in degrees.
 Note: The values for alpha, scaleX, and scaleY, and scaleY are 0 to 1, where 1 is 100%, .5 is 50%, and so forth.
 
-each(SYMBOL_NAME) returns a collection of items of the kind SYMBOL_NAME. It is effectively a query function.
+`each(SYMBOL_NAME)` returns a collection of items of the kind `SYMBOL_NAME`. It is effectively a query function.
 
 ##Create and use random number
 Example:
@@ -124,10 +124,12 @@ When the user clicks, the workspace will move sideways so that it is -100px off 
 The previous ‘spin’ response is overwritten and will not be triggered.
 Description:
 
-	INPUT_TYPE = ANIMATION() Or
-	INPUT_TYPE = ANIMATION(VALUE) Or
-	INPUT_TYPE = ANIMATION(VALUE, LENGTH) Or
-	INPUT_TYPE = ANIMATION(VALUE, LENGTH, DELAY) 
+````actionscript
+INPUT_TYPE = ANIMATION() Or
+INPUT_TYPE = ANIMATION(VALUE) Or
+INPUT_TYPE = ANIMATION(VALUE, LENGTH) Or
+INPUT_TYPE = ANIMATION(VALUE, LENGTH, DELAY) 
+````
 
 Options for INPUT_TYPE:
 
@@ -162,9 +164,9 @@ click = each(Box).spin(360,2);
 When the user clicks, all boxes will rotate to 360° over the course of two seconds.
 
 Description:
-
-	INPUT_TYPE = each(SYMBOL_NAME).ANIMATION(VALUE, DURATION, DELAY) 
-	
+````actionscript
+INPUT_TYPE = each(SYMBOL_NAME).ANIMATION(VALUE, DURATION, DELAY) 
+````
 Options for the different parts of this structure are the same as in previous sections.
 
 ##Create a response using random values
