@@ -1,4 +1,4 @@
-#DAAPPrototype
+# DAAPPrototype
 
 An old Actionscript library that makes basic interactions easy. 
 Created for DAAP Summer Camp workshops on interactivity. The goal was to get high-schoolers from zero programming knowledge to making interactive things in a couple of hours.
@@ -14,7 +14,7 @@ clip.click = function(){ trace('ok'); } // totally ok
 DAAPPrototype makes use of the excellent [Greensock](http://greensock.com) tween engine and the experimental [Manipulus](https://github.com/IanBellomy/Manipulus) library. 
 
 	
-##Getting Started
+## Getting Started
 
 Set the *Class* of the working file to: 
 
@@ -22,7 +22,7 @@ Set the *Class* of the working file to:
 	
 Make sure any symbols you'd like to use are set to export for actionscript.
 
-##Put a shape (or shapes) on the screen:
+## Put a shape (or shapes) on the screen:
 
 ````actionscript
 make(Box,5);
@@ -75,7 +75,7 @@ Note: The values for alpha, scaleX, and scaleY, and scaleY are 0 to 1, where 1 i
 
 `each(SYMBOL_NAME)` returns a collection of items of the kind `SYMBOL_NAME`. It is effectively a query function.
 
-##Create and use random number
+## Create and use random number
 Example:
 
 ````actionscript
@@ -106,7 +106,7 @@ random(LOW,HIGH, MULTIPLE);
 
 Note: If the multiple input is included, the result will be a multiple of that number. If not, the result will be any decimal number between minimum and maximum.
  
-##Create a basic response to user input
+## Create a basic response to user input
 Example:
 ````actionscript
 click = grow(.5);
@@ -155,7 +155,7 @@ click = [grow(.5), spin(45,2), slide(-100,2)];
 ````	
 When the user clicks, the workspace will shrink to 50%, rotate to 45° over the course of two seconds, and move sideways so that it is -100px off screen.
 
-##Create a response for all shapes
+## Create a response for all shapes
 Example:
 
 ````actionscript
@@ -179,7 +179,7 @@ click = each(Box).spin(random(0,360,45));
 When the user clicks, all boxes will rotate, over time, to a value between 0° and 360°. The
 final value will be a multiple of 45.
 
-##Create a one shape response to input on that shape
+## Create a one shape response to input on that shape
 Example:
 
 ````actionscript
